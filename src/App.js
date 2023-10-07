@@ -26,15 +26,15 @@ const App = () => {
         let value = result.data.text;
         let found = false;
         let ID = '';
-       // for(let i=0;i<value.length;i++){
-          //if(value[i]==='I' && value[i+1]==='D' && value[i+2]===' ' && value[i+3]==='N'){
-           // found = true;
-         // }
-          //if(found === true){
-            //ID += value[i];
-          //}
-        //}
-        setText(value);
+       for(let i=0;i<value.length;i++){
+          if(value[i]==='I' && value[i+1]==='D' && value[i+2]===' ' && value[i+3]==='N'){
+            found = true;
+          }
+          if(found === true){
+            ID += value[i];
+          }
+        }
+        setText(ID);
         setIsLoading(false);
       });
   };
